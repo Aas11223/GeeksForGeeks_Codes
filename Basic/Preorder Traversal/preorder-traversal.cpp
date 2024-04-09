@@ -132,25 +132,17 @@ struct Node
 vector <int> preorder(Node* root)
 {
   // Your code here
+  // PREORDER: NODE-LEFT-RIGHT
 //   faith: given root node, go to all decendents
 //   Main logic: traversal(root.left), traversal(root.right)
 //   base case: root==null return
-// if(root==NULL){
-//     return;
-// }
-// cout<< root->data <<" ";
-// preorder(root->left);
-// preorder(root->right);
-vector<int> result;
-if (root == NULL)
-        return result;
 
-    // Deal with the node
-    cout << root->data << " ";
+vector<int> res;
+if(root==NULL){
+    return res;
+}
+cout<< root->data <<" ";
+preorder(root->left);
+preorder(root->right);
 
-    // Recur on left subtree
-    preorder(root->left);
-
-    // Recur on right subtree
-    preorder(root->right);
 }
