@@ -11,12 +11,12 @@ class Solution {
           ans.push_back(currSum);
           return;
       }
+      //
       helper(arr,n,index+1,currSum+arr[index],ans);
       helper(arr,n,index+1,currSum,ans);
   }
     vector<int> subsetSums(vector<int> arr, int n) {
         // Write Your Code here
-        
         vector<int> ans;
         helper(arr,n,0,0,ans);
         return ans;
